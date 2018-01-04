@@ -11,11 +11,11 @@ if not "%PackageVersion%" == "" (
     set version=%PackageVersion%
 )
 
-%MsBuildExe% InternetArchiveApi.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
+"%MsBuildExe%" InternetArchiveApi.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 mkdir Build
 mkdir Build\lib
 mkdir Build\lib\net40
 
-%nuget% pack "InternetArchiveApi.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
+"%nuget%" pack "InternetArchiveApi.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
 
