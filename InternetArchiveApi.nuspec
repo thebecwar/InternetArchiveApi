@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>InternetArchiveApi</id>
+    <version>$version$</version>
+    <title>Basic Internet Archive API wrapper</title>
+    <authors>Mark Becwar</authors>
+    <owners>Mark Becwar</owners>
+    <licenseUrl>https://en.wikipedia.org/wiki/Beerware</licenseUrl>
+    <projectUrl>https://github.com/thebecwar/InternetArchiveApi</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is an incredibly basic wrapper around the Internet Archive's JSON API.</description>
+    <releaseNotes>All pull requests for feature improvements, or bug fixes are happily welcomed.</releaseNotes>
+    <copyright></copyright>
+    <tags>api</tags>
+    <dependencies>
+        <dependency id="Newtonsoft.Json" version="10.0" />
+    </dependencies>
+  </metadata>
+  <files>
+        <file src="InternetArchiveApi\bin\$configuration$\InternetArchiveApi.dll" target="lib\net40\" />
+  </files>
+</package>
