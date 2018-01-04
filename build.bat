@@ -11,7 +11,7 @@ if not "%PackageVersion%" == "" (
     set version=%PackageVersion%
 )
 
-"%nuget%" restore "InternetArchiveApi\packages.config"
+"%nuget%" restore "InternetArchiveApi.sln"
 
 "%MsBuildExe%" InternetArchiveApi.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
