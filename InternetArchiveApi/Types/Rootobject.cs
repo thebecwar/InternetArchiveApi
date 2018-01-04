@@ -24,6 +24,25 @@ namespace InternetArchiveApi.Types
         public int uniq { get; set; }
         public string[] workable_servers { get; set; }
 
+        [JsonExtensionData]
+        private Dictionary<string, Newtonsoft.Json.Linq.JToken> CustomFields { get; set; }
+        public T GetCustomField<T>(string key)
+        {
+            if (CustomFields != null && CustomFields.ContainsKey(key))
+            {
+                return CustomFields[key].ToObject<T>();
+            }
+            return default(T);
+        }
+        public string[] GetCustomFields()
+        {
+            if (CustomFields != null)
+            {
+                return CustomFields.Keys.ToArray();
+            }
+            return new string[0];
+        }
+
         public static Rootobject FromJson(string json)
         {
             return JsonConvert.DeserializeObject<Rootobject>(json);

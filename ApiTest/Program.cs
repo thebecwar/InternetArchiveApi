@@ -12,7 +12,7 @@ namespace ApiTest
         static void Main(string[] args)
         {
             InternetArchive archive = new InternetArchive();
-            //var item = archive.GetItem("apple_ii_library_4am");
+            var item = archive.GetItem("apple_ii_library_4am");
 
             var query = new Query();
             query.SearchQuery = "collection:apple_ii_library_4am";
@@ -21,6 +21,10 @@ namespace ApiTest
             query.RequestFields = QueryFields.Identifier | QueryFields.Title;
 
             var result = archive.RunQuery(query);
+
+            item = archive.GetItem(result.docs[0].identifier);
+            Console.WriteLine(String.Join(", ", item.metadata.GetCustomFields()));
+            Console.WriteLine(item.metadata.GetCustomField<string>("crack_number"));
             
         }
     }
