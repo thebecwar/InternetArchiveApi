@@ -8,7 +8,7 @@
     <owners>Mark Becwar</owners>
     <licenseUrl>https://en.wikipedia.org/wiki/Beerware</licenseUrl>
     <projectUrl>https://github.com/thebecwar/InternetArchiveApi</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/thebecwar/InternetArchiveApi/master/IA%20API%20Logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This is an incredibly basic wrapper around the Internet Archive's JSON API.</description>
     <releaseNotes>All pull requests for feature improvements, or bug fixes are happily welcomed.</releaseNotes>
